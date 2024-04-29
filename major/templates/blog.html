@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>OTIS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Josefin+Sans&display=swap');
+
+:root {
+    --bg-size: 100% 100%;
+    --main_color: #fff;
+    --title: 'Josefin Sans', sans-serif;
+    --font-para: 'David Libre', serif;
+    --btn-color: #bbe1fa;
+    --btn-font-color: #000;
+    --btn-font: 1.5rem;
+    --eff: .3s all ease;
+}
+
+* {
+    font-family: var(--font-para);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p,
+label,
+input::placeholder {
+    font-size: 1.9rem;
+    line-height: 170%;
+    color: #6c757d;
+}
+
+
+a,
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    background: hsl(84, 3%, 94%);
+}
+
+.main_heading {
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 5rem;
+    color: #000;
+}
+
+.main_heading__para {
+    font-size: 2.2rem;
+}
+
+.main_header__div {
+    height: calc(100vh - 40vh);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0));
+    background-size: var(--bg-size);
+}
+
+.main_header__div p {
+    font-weight: bold;
+    font-size: 3.5rem;
+    font-family: var(--title);
+    color: var(--main_color);
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+
+.main_header__div h2 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    font-family: var(--title);
+    color: var(--main_color);
+    padding-bottom: 2rem;
+    transition: var(--eff);
+}
+
+.main_header__div span {
+    font-family: var(--title);
+}
+
+.animateWord div {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 8rem;
+    padding-top: 1rem;
+    margin-top: -1rem;
+}
+
+.animateWord div li {
+    font-weight: bold;
+    padding: 0 1rem;
+    height: 4.5rem;
+    margin-bottom: 4.5rem;
+    display: block;
+    font-family: var(--title);
+}
+
+.flip {
+    -webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@-webkit-keyframes flip4 {
+    0% {
+        margin-top: -360px;
+    }
+
+    5% {
+        margin-top: -270px;
+    }
+
+    25% {
+        margin-top: -270px;
+    }
+
+    30% {
+        margin-top: -180px;
+    }
+
+    50% {
+        margin-top: -180px;
+    }
+
+    55% {
+        margin-top: -90px;
+    }
+
+    75% {
+        margin-top: -90px;
+    }
+
+    80% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+
+}
+
+@keyframes flip4 {
+    0% {
+        margin-top: -360px;
+    }
+
+    5% {
+        margin-top: -270px;
+    }
+
+    25% {
+        margin-top: -270px;
+    }
+
+    30% {
+        margin-top: -180px;
+    }
+
+    50% {
+        margin-top: -180px;
+    }
+
+    55% {
+        margin-top: -90px;
+    }
+
+    75% {
+        margin-top: -90px;
+    }
+
+    80% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+
+}
+
+.main_header__div button {
+    color: var(--btn-font-color);
+    border-width: 0;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+}
+
+.main_header__div button:hover,
+figure img:hover,
+.left_div__reply:hover,
+.left_div__like:hover,
+.subs_btn:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 3rem -1rem rgba(255, 255, 255, 0.7);
+}
+
+/*left side vblog stykle start*/
+.blog_left__div h1 {
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.blog_left__div .blog_title {
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+
+.blog_left__div .blog_title span {
+    color: #1b262c;
+}
+
+.blog_left__div p span {
+    color: #1b262c;
+}
+
+.left_div_btns {
+    margin-top: 3rem;
+    transition: var(--eff);
+}
+
+.left_div__like {
+    color: var(--btn-font-color);
+    /*border-width: .2rem;*/
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+    border: none;
+    width: fit-content;
+}
+
+.left_div__reply {
+    color: var(--btn-font-color);
+    /*border-width: .2rem;*/
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+    border: none;
+    width: fit-content;
+}
+
+.replies {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    transition: var(--eff);
+    display: none;
+}
+
+.thapa_show {
+    margin: 20px 0;
+    transition: var(--eff);
+    display: block;
+}
+
+/*right sdie div style start*/
+.about_me_div {
+    width: auto;
+    height: 40rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, transparent 50%, rgba(208, 206, 207, 0.8) 50%), url('../images/thapa.jpg');
+    background-size: var(--bg-size);
+}
+
+.about_me_div p:first-child {
+    padding-bottom: 0.2rem;
+    font-size: 2.2rem;
+}
+
+.about_me_div p {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    color: #000;
+}
+
+.right_div__title {
+    background: #d0cecf;
+    box-shadow: 0 1rem 3rem -1rem rgba(255, 255, 255, 0.7);
+}
+
+.right_div__title h2 {
+    font-size: 2.5rem;
+    padding-left: 2rem;
+}
+
+.popular_post__img1 {
+    background-image: url('../images/bg.png');
+    background-size: var(--bg-size);
+}
+
+.popular_post__img2 {
+    background-image: url('../images/mz.jpg');
+    background-size: var(--bg-size);
+}
+
+.popular_post__img3 {
+    background-image: url('../images/zb.jpg');
+    background-size: var(--bg-size);
+}
+
+.popular_post__img4 {
+    background-image: url('../images/sj.jpg');
+    background-size: var(--bg-size);
+}
+
+.right_sub__div {
+    background: #fff;
+    padding: 2.5rem 1rem;
+}
+
+.right_sub__div .row {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    
+}
+
+.right_sub__div .row:last-child {
+    margin-bottom: 0;
+}
+
+.row>.right_div_post {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1;
+    
+}
+
+/*tags style*/
+.tags_main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(4rem, 8rem));
+    grid-gap: .5rem;
+}
+
+.tags_main a {
+    font-size: 1.7rem;
+    line-height: 170%;
+    font-weight: lighter;
+    background: #6c757d;
+    transition: var(--eff);
+}
+
+.tags_main a:hover {
+    color: var(--btn-font-color);
+    background: var(--btn-color);
+}
+
+/*adverstisment*/
+.advertise_img {
+    min-width: 10rem;
+    height: 20rem;
+    display: grid;
+    place-items: center;
+}
+
+/*left side icons*/
+.fab {
+    color: #000;
+}
+
+.fab:hover {
+    color: #d0cecf;
+    transform: rotate(360deg);
+}
+
+/*right Subscribe  style*/
+.right_sub__div #exampleInputEmail1 {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
+}
+
+.subs_btn {
+    color: #000;
+    border-width: 0;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    display: block;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+    width: fit-content;
+}
+
+footer p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/*responsive code start*/
+@media(max-width:998px) {
+    html {
+        font-size: 60%;
+    }
+
+    .left_div_blog {
+        margin: 3rem 0;
+    }
+
+    p,
+    label,
+    input::placeholder {
+        font-size: 2.2rem;
+    }
+
+    :root {
+        --btn-font: 2rem;
+    }
+
+    .main_header h2 {
+        font-size: 4.5rem;
+    }
+
+}
+@media(max-width:768px) {
+    html {
+        font-size: 45%;
+    }
+
+    .left_div_blog {
+        margin: 3rem 0;
+    }
+}
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3282b8;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat-button:hover {
+  background-color: #1b262c;
+  transform: scale(1.1);
+}
+
+.chat-button i {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.music_player_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_player {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.music_player_title h2 {
+    color: #333;
+    margin: 0;
+}
+
+.music_player_controls {
+    margin-top: 20px;
+}
+
+.current_track_info {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.music_controls button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.music_progress {
+    background-color: #ccc;
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.progress_bar {
+    background-color: #007bff; /* You can change this color as per your design */
+    height: 100%;
+    width: 50%; /* Adjust this width based on the progress */
+    border-radius: 3px;
+}
+
+/* CSS for transition and animation effects */
+
+/* Add transition effect to play/pause button */
+.music_controls button {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add animation effect to progress bar */
+.progress_bar {
+    transition: width 0.2s ease-in-out
+}
+
+@media screen and (max-width: 768px) {
+        .music_player {
+            width: 90%;
+            max-width: none;
+        }
+}
+
+/*CHAT TOGGLE*/
+#chatToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+#chatPopup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: none;
+  width: 400px;
+  max-height: max-content;
+  
+  overflow: hidden;
+  z-index: 9998;
+}
+
+#chatContent {
+  padding: 10px;
+}
+
+/*CHAT CONTAINER*/
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-size: medium;
+    }
+ .container {
+        width: fit-content;
+        height: max-content;
+        margin: 0px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 10px;
+    }
+ .header {
+        background-color: #3282b8;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+        
+    }
+    
+ .profile-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+ .profile-name {
+        font-size: 18px;
+        font-weight: bold;
+        position: absolute; 
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+ .messages {
+        padding: 1px;
+        overflow-y: scroll;
+        max-height: 150px;
+        margin-bottom: 0px;
+    }
+ .message {
+        margin-bottom: 5px;
+    }
+ .user-message {
+        background-color: #3282b8;
+        color: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 70%;
+        float: right;
+        clear: both;
+    }
+ .bot-message {
+        background-color: #f9f9f9;
+        color: #333;
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 70%;
+        float: left;
+        clear: both;
+    }
+    input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    button {
+        width: calc(100% - 20px);
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3282b8;
+        color: #fff;
+        cursor: pointer;
+        margin: 10px;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #3282b8;
+    }
+    /* Add new styles here */
+ .message::after {
+        content: "";
+        clear: both;
+        display: table;
+        overflow-y: scroll;
+    }
+ .messages {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+ .message {
+        width: 90%;
+    }
+ .user-message,.bot-message {
+        margin-top: 10px;
+    }
+    /* Style for the chat messages */
+.messages {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  overflow-y: scroll; 
+  /* Enable scrolling */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.messages::-webkit-scrollbar{
+    display: none;
+}
+/* Style for user input */
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#userInput {
+  width: calc(100% - 70px); /* Adjust width to leave space for button */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  
+}
+
+/* Style for the send button */
+button {
+  width: 60px;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10ox;
+}
+.input-container i {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+.input-container i:hover {
+  background-color: #0056b3;
+}
+/* Hover effect for the send button */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Unique feature: animation when new message is added */
+.messages .message {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+/*DOCTOR PROFILES*/
+
+.doctor_profile{
+    align-items: center;
+    display: inline;
+    height: fit-content;
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+}
+
+.profile-img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+</style>
+    </head>
+
+    <body>
+        <header class="main_header">
+            <div class="d-flex justify-content-center align-items-center flex-column py-5">
+                <h1 class="text-uppercase main_heading">OTIS</h1>
+                <h3 class="text-uppercase main_heading">Mental health therapist</h3>
+            </div>
+            <!-- //the main image -->
+        </header>
+        <!-- header ends -->
+        <!-- two sided blog part starts -->
+        <div class="container-fluid ">
+            <div class="row ">
+                <!-- to get the space form left and right -->
+                <div class="col-xl-10  col-lg-10 col-md-12 col-11 mx-auto my-5">
+                    <div class="row gx-5 mx-sm-auto">
+                        <!-- left side of the blog  -->
+                        <div class="col-lg-8 col-md-11 col-11 mx-auto">
+                            <div class="row gy-5 ">
+                                <div class="col-12 card p-4 shadow blog_left__div">
+                                    <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                        <h1 class="text-uppercase">Anxiety</h1>
+                                        <p class="blog_title"> <span class="font-weight-bold"> Title description, </span> Aug 12, 2020 </p>
+                                    </div>
+                                    <figure class="right_side_img mb-5">
+                                        <img src="{{ url_for('static', filename= 'images/anxiety.jpg')}}" alt="anxiety" class="img-fluid shadow">
+                                    </figure>
+                                    <p><span class="font-weight-bold"></span> Anxiety is a common mental health condition characterized by feelings of worry, fear, and unease that can range from mild to severe. While experiencing occasional anxiety is a normal part of life, persistent and overwhelming anxiety can significantly interfere with daily activities and overall well-being. Symptoms of anxiety may include racing thoughts, restlessness, difficulty concentrating, muscle tension, and trouble sleeping. Fortunately, anxiety is highly treatable, and various approaches such as therapy, medication, relaxation techniques, and lifestyle changes can help individuals manage and alleviate symptoms. Seeking support from mental health professionals and loved ones is essential for navigating anxiety and fostering a sense of resilience and empowerment.</p>
+                                    <p>
+                                        Acknowledging and understanding anxiety is crucial in fostering empathy and support for those affected by this condition. By fostering open conversations and promoting mental health awareness, we can reduce stigma and create a more compassionate society where individuals feel comfortable seeking help when needed. It's important to remember that anxiety is not a sign of weakness, and with the right support and resources, individuals can learn to cope with and overcome the challenges it presents, ultimately leading to a healthier and more fulfilling life.
+                                    </p>
+                                    <div class="d-flex justify-content-between left_div_btns">
+                                        <div>
+                                            <button class="left_div__like" id="like_btn"><i class="fa fa-thumbs-up"></i>Like</button>
+                                        </div>
+                                        <div>
+                                            <button class="left_div__reply" onclick="reply('reply1')">Replies <badge class="bg-white text-dark p-2">1</badge></button>
+                                        </div>
+                                    </div>
+                                    <div class="replies" id="reply1">
+                                        <div class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                            <div class=" reply_img mx-2 align-self-center ">
+                                                <img src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                            </div>
+                                            <div class="reply_text__left">
+                                                <p class="blog_title "> <span class="font-weight-bold"> Kaab, </span> Aug 12, 2020, 7:20 PM </p>
+                                                <p>Awesome, Bro I love your content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2nd topic  -->
+                                <div class="col-12 card p-4 shadow blog_left__div">
+                                    <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                        <h1 class="text-uppercase">DEPRESSION</h1>
+                                        <p class="blog_title"> <span class="font-weight-bold"> Title description, </span> Aug 12, 2020 </p>
+                                    </div>
+                                    <figure class="right_side_img mb-5">
+                                        <img src="{{ url_for('static', filename= 'images/depression1.jpg')}}" alt="depression" class="img-fluid shadow">
+                                    </figure>
+                                    <p><span class="font-weight-bold"></span>Depression is a serious mental health disorder that affects millions of people worldwide, causing persistent feelings of sadness, hopelessness, and loss of interest in activities once enjoyed. It can also manifest in physical symptoms such as changes in appetite or sleep patterns, fatigue, and difficulty concentrating. Depression can significantly impact one's quality of life, relationships, and overall functioning. However, it's important to recognize that depression is not a character flaw or a sign of personal weakness. It is a medical condition that can be effectively treated through various approaches, including therapy, medication, lifestyle changes, and social support.</p>
+                                    <p>
+                                        Understanding and destigmatizing depression is essential for promoting mental health awareness and encouraging individuals to seek help. By fostering open conversations and providing access to resources and support networks, we can create a more empathetic and supportive environment for those struggling with depression. With proper treatment and support, individuals can manage their symptoms, regain a sense of hope, and work towards leading fulfilling and meaningful lives.
+                                    </p>
+                                    <div class="d-flex justify-content-between left_div_btns">
+                                        <div>
+                                            <button class="left_div__like" id="like_btn"><i class="fa fa-thumbs-up"></i>Like</button>
+                                        </div>
+                                        <div>
+                                            <button class="left_div__reply" onclick="reply('reply2')">Replies <badge class="bg-white text-dark p-2">2</badge></button>
+                                        </div>
+                                    </div>
+                                    <div class="replies" id="reply2">
+                                        <div class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                            <div class=" reply_img mx-2 align-self-center ">
+                                                <img src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                            </div>
+                                            <div class="reply_text__left">
+                                                <p class="blog_title "> <span class="font-weight-bold"> Kaab, </span> Aug 11, 2020, 7:20 PM </p>
+                                                <p>Very helpful :)</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                            <div class=" reply_img mx-2 align-self-center ">
+                                                <img src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                            </div>
+                                            <div class="reply_text__left">
+                                                <p class="blog_title "> <span class="font-weight-bold"> Nabil, </span> Aug 12, 2020, 7:20 PM </p>
+                                                <p>Awesome, Bro I love your content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 3rd topic -->
+                                <div class="col-12 card p-4 shadow blog_left__div">
+                                    <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                        <h1 class="text-uppercase">STRESS</h1>
+                                        <p class="blog_title"> <span class="font-weight-bold"> Title description, </span> Aug 12, 2020 </p>
+                                    </div>
+                                    <figure class="right_side_img mb-5">
+                                        <img src="{{ url_for('static', filename= 'images/stress.png')}}" alt="stress" class="img-fluid shadow">
+                                    </figure>
+                                    <p><span class="font-weight-bold"></span> Stress is a natural response to challenges or demands, triggering the body's "fight or flight" mechanism in anticipation of potential threats. While some stress can be motivating and help individuals perform under pressure, chronic or excessive stress can have detrimental effects on physical and mental health. Symptoms of stress may include irritability, fatigue, difficulty concentrating, muscle tension, and changes in appetite or sleep patterns. Long-term stress has been linked to a variety of health issues, including cardiovascular problems, weakened immune function, and mental health disorders such as anxiety and depression. Managing stress effectively involves adopting healthy coping strategies such as exercise, relaxation techniques, time management, and seeking support from friends, family, or mental health professionals. By prioritizing self-care and implementing stress-reducing practices, individuals can mitigate the negative effects of stress and improve their overall well-being.</p>
+                                    <p>
+                                        Effective stress management is crucial for maintaining overall well-being in today's fast-paced world. By implementing practical strategies, individuals can reduce the negative impact of stress on their physical and mental health. One approach involves prioritizing self-care activities such as regular exercise, adequate sleep, and healthy eating habits, which can bolster resilience and improve stress tolerance. Additionally, practicing relaxation techniques such as deep breathing, meditation, and mindfulness can help calm the mind and promote a sense of peace and balance amidst life's challenges. By integrating these techniques into daily routines and seeking support from loved ones or professional resources when needed, individuals can cultivate healthier responses to stress and enhance their quality of life.
+                                    </p>
+                                    <div class="d-flex justify-content-between left_div_btns">
+                                        <div>
+                                            <button class="left_div__like" id="like_btn"><i class="fa fa-thumbs-up"></i>Like</button>
+                                        </div>
+                                        <div>
+                                            <button class="left_div__reply" onclick="reply('reply3')">Replies <badge class="bg-white text-dark p-2">4</badge></button>
+                                        </div>
+                                    </div>
+                                    <div class="replies" id="reply3">
+                                        <div class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                            <div class=" reply_img mx-2 align-self-center ">
+                                                <img src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                            </div>
+                                            <div class="reply_text__left">
+                                                <p class="blog_title "> <span class="font-weight-bold"> Akanksha, </span> Aug 12, 2020, 7:20 PM </p>
+                                                <p>Awesome, Bro I love your content.</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                            <div class=" reply_img mx-2 align-self-center ">
+                                                <img src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                            </div>
+                                            <div class="reply_text__left">
+                                                <p class="blog_title "> <span class="font-weight-bold"> Nabil, </span> Aug 12, 2020, 7:20 PM </p>
+                                                <p>Awesome, Bro I love your content.</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                            <div class=" reply_img mx-2 align-self-center ">
+                                                <img src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                            </div>
+                                            <div class="reply_text__left">
+                                                <p class="blog_title "> <span class="font-weight-bold"> Kaab, </span> Aug 12, 2020, 7:20 PM </p>
+                                                <p>Awesome, Bro I love your content.</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-start flex-row align-items-center card reply_card py-3 ">
+                                            <div class=" reply_img mx-2 align-self-center ">
+                                                <img src="https://img.icons8.com/doodle/48/000000/user-male-skin-type-5.png" />
+                                            </div>
+                                            <div class="reply_text__left">
+                                                <p class="blog_title "> <span class="font-weight-bold"> Rahul, </span> Aug 12, 2020, 7:20 PM </p>
+                                                <p>Awesome, Bro I love your content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  *******************************************************
+            **********************************************************.
+            right side of the div
+            *******************************************************
+            **********************************************************
+            -->
+                        <div class="col-lg-3 col-md-7 col-11  justify-content-end m-lg-0 m-auto ">
+                            <div class="row gy-5 left_div__blog">
+                                <!-- Follow Me -->
+                                <div class=" right_div_post">
+                                    <div class="right_div__title py-4 pl-2 ">
+                                        <h2>Follow Me</h2>
+                                    </div>
+                                    <div class="right_sub__div d-flex justify-content-around">
+                                        <a href="https://www.instagram.com/akankshareadss?igsh=MWJhNWd0aHRweWxwcQ==" target="_thapa"> <i class="fab fa-3x fa-instagram"></i></a>
+                                        <a href="https://github.com/akanksharai01"> <i class="fab fa-3x fa-github-square"></i> </a>
+                                        <a href="https://www.linkedin.com/in/akankshasrai/?_l=en_US"> <i class="fab fa-3x fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Subscribe -->
+                                <div class=" right_div_post">
+                                    <div class="right_div__title py-4 pl-2 ">
+                                        <h2>Subscribe</h2>
+                                    </div>
+                                    <div class="right_sub__div">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Enter your e-mail below and get notified on the latest blog posts.</label>
+                                                <input type="email" class="form-control mt-2" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="subs_btn d-block" type="submit">Subscribe</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--MUSIC-->
+                                <div class=" right_div_post">
+                                    <div class="row gy-5 music_player_container">
+                                        <!-- Music Player -->
+                                        <div class="music_player">
+                                            <audio
+                                                src="{{ url_for('static', filename= 'audios/A_Clean_Record.mp3')}}" type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                            
+                                            <div class="music_player_title py-4 pl-2">
+                                                <h2>Now Playing</h2>
+                                            </div>
+                                            <div class="music_player_controls">
+                                                <!-- Display current track information -->
+                                                <p class="current_track_info">Song Name - Artist</p>
+                                                <!-- Music player controls -->
+                                                <div class="music_controls">
+                                                    <!-- Previous track button -->
+                                                    <button class="prev_track_btn"><i class="fas fa-backward"></i></button>
+                                                    <!-- Play/Pause button -->
+                                                    <button class="play_pause_btn"><i class="fas fa-play"></i></button>
+                                                    <!-- Next track button -->
+                                                    <button class="next_track_btn"><i class="fas fa-forward"></i></button>
+                                                </div>
+                                                <!-- Music progress bar -->
+                                                <div class="music_progress">
+                                                    <div class="progress_bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <!-- DOCTOR PROFILES -->
+                            <div class="music_player">
+                                <div class=" right_div_post" >
+                                        <div class="doctor_profile">
+                                            <figure>
+                                                <img src="{{ url_for('static', filename= 'images/doctor1.jpg')}}"  alt="logo"  class="profile-img" >
+                                            </figure>
+                                              <h2 class="text-lg font-bold">Dr. Sneha Naik Samant</h2>
+                                              <p class="text-zinc-600">Psychiatrist in Mumbai,</p>
+                                              <p class="text-blue-600">Maharashtra</p>
+                                              <p class="text-blue-600">+91 088501 88789</p>
+                                            </div>
+                                        
+                                          </div>
+                                    
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                                    
+                </div>
+            <div id="chatbot-toggle" onclick="toggleChat()"class="chat-button">
+                <i class="fa fa-comment"></i>
+            </div>
+                <div id="chatPopup" onclick="stopPropagation(event)">
+                    <div class="container">
+                        <div class="header">
+                            <img src="{{ url_for('static', filename= 'images/baymax.jpg')}}" alt="Profile Image" class="profile-image">
+                            <div class="profile-name">OTIS</div>
+                        </div>
+                        <div class="messages" id="messages"></div>
+                        <div class="input-container">
+                           <input type="text" id="userInput" placeholder="Enter your feelings...">
+                           <i class="fas fa-paper-plane" onclick="sendMessage()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="text-center py-5 bg-light">Designed By ©Akanksha</p>
+        </footer>
+        <!-- Optional JavaScript -->
+        <!-- Popper.js first, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        const like = document.getElementById('like_btn');
+        const singleClick = () => {
+            like.style.fontWeight = 'bold';
+            like.style.background = '#bbe1fa';
+            like.style.color = '#1b262c';
+            like.innerHTML = "✓ Liked";
+        }
+        const doubleClick = () => {
+            like.style.fontWeight = 'normal';
+            like.style.background = '#3282b8';
+            like.style.color = '#fff';
+            like.innerHTML = "Like";
+        }
+        var clickCount = 0;
+        like.addEventListener('click', function() {
+            clickCount++;
+            if (clickCount === 1) {
+                singleClickTimer = setTimeout(function() {
+                    clickCount = 0;
+                    singleClick();
+                }, 400);
+            } else if (clickCount === 2) {
+                clearTimeout(singleClickTimer);
+                clickCount = 0;
+                doubleClick();
+            }
+        }, false);
+        // show and hide the replies
+        const reply = (rep) => {
+            console.log('hi');
+            // debugger;
+            var res = document.getElementById(rep);
+            console.log(res);
+            if (res.className == "replies") {
+                res.className = "thapa_show";
+                res.style.WebkitTransition = 'all 0.3s ease';
+                // res.style.transition = 'all 0.3s ease';
+                // console.log(thapa_show);
+            } else if (res.className == 'thapa_show') {
+                // res.className = " ";
+                console.log('thapa show');
+                res.className = "replies";
+            }
+        }
+        document.getElementById('chatbot-toggle').addEventListener('click', function() {
+    document.getElementById('chatbot').style.display = 'block';
+  });
+  
+  document.getElementById('close-chatbot').addEventListener('click', function() {
+    document.getElementById('chatbot').style.display = 'none';
+  });
+  
+  document.getElementById('chatbot-toggle').addEventListener('click', function() {
+  document.getElementById('chatbot').style.display = 'block';
+});
+
+document.getElementById('close-chatbot').addEventListener('click', function() {
+  document.getElementById('chatbot').style.display = 'none';
+});
+
+// Replace this with your actual audio elements
+const audioElements = [
+  new Audio('C:\Users\Akanksha Suhasini Ra\OneDrive\Desktop\major\major\templates\audios\A_Clean_Record.mp3'),
+  new Audio('C:\Users\Akanksha Suhasini Ra\OneDrive\Desktop\major\major\templates\audios\Barney_s.mp3'),
+  // Add more audio elements as needed
+];
+
+
+    // JavaScript for Music Player
+    document.addEventListener('DOMContentLoaded', function () {
+        const playPauseBtn = document.querySelector('.play_pause_btn');
+        const prevTrackBtn = document.querySelector('.prev_track_btn');
+        const nextTrackBtn = document.querySelector('.next_track_btn');
+        const progressBar = document.querySelector('.progress_bar');
+
+        let isPlaying = false;
+        let progress = 0; // Current progress of the track
+
+        // Function to play or pause the track
+        function togglePlayPause() {
+            if (isPlaying) {
+                isPlaying = false;
+                audioPlayer.pause();
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                
+            } else {
+                isPlaying = true;
+                audioPlayer.play();
+                playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+        }
+
+        // Function to go to the previous track
+        function prevTrack() {
+            // Go to the previous track (You can add your own logic)
+        }
+
+        // Function to go to the next track
+        function nextTrack() {
+            // Go to the next track (You can add your own logic)
+        }
+
+        // Event listeners for buttons
+        playPauseBtn.addEventListener('click', togglePlayPause);
+        prevTrackBtn.addEventListener('click', prevTrack);
+        nextTrackBtn.addEventListener('click', nextTrack);
+
+        audioPlayer.addEventListener('timeupdate', function () {
+            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressBar.style.width = progress + '%';
+
+        // Simulating progress update (for demonstration purposes)
+        setInterval(() => {
+            if (isPlaying) {
+                progress += 1; // Incrementing progress
+                progressBar.style.width = progress + '%';
+            }
+        }, 1000); // Update progress every second
+    });
+});
+
+function toggleChat() {
+  var popup = document.getElementById("chatPopup");
+  if (popup.style.display === "none" || popup.style.display ==="") {
+    popup.style.display = "block";
+  } else {
+    popup.style.display = "none";
+  }
+}
+
+function stopPropagation(event) {
+    event.stopPropagation();
+
+}
+function sendMessage() {
+            var userInput = document.getElementById('userInput').value;
+            if (!userInput.trim()) {
+                return;
+            }
+            displayMessage(userInput, 'user');
+            document.getElementById('userInput').value = '';
+            fetch('/get_advice', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'user_input=' + encodeURIComponent(userInput)
+            })
+         .then(response => response.json())
+         .then(data => {
+                displayMessage(data.advice, 'bot');
+            })
+         .catch(error => console.error('Error:', error));
+        }
+
+        function displayMessage(message, sender) {
+            var messagesContainer = document.getElementById('messages');
+            var messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            if (sender === 'user') {
+                messageElement.innerHTML = '<div class="user-message">' + message + '</div>';
+            } else {
+                messageElement.innerHTML = '<div class="bot-message">' + message + '</div>';
+            }
+            messagesContainer.appendChild(messageElement);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        </script>
+    </body>
+</html>
